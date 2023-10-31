@@ -168,8 +168,46 @@ WHERE codpes = 10
 
 ![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/Tabela%20Pessoa%20Info.png?raw=true)
 <br>
+  - Seleções 
+    ```sql
+    SELECT nome, cpf
+    FROM tbpessoa 
+    WHERE datanasc >= '1994-01-01';
+    ```
+<br>
 
+> Visualização
+
+![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/Sele%C3%A7%C3%A3o%201.png?raw=true)
+<br>
+
+  - Relacionamento entre tabelas
+    - Saber o `nome e profissão das pessoas maiores de 29 anos` que moram na `Cidade B` -- Considerando a data atual como '2023-10-31'
+
+  ```sql
+    SELECT p.nome, pi.profissao
+    FROM tbpessoa p
+    JOIN tbpessoainfo pi ON p.cod = pi.cod
+    WHERE p.datanasc <= '1993-10-31' 
+    AND pi.cidade = 'B';
+   ```
+<br>
+
+> Visualização
+
+![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/Maior%20de%2029%20anos.png?raw=true)
+<br>
 
 ## Conclusão
-Este projeto demonstra os conceitos básicos de manipulação de dados em um banco de dados usando SQL. O SQL é uma ferramenta poderosa para gerenciar dados em sistemas de gerenciamento de banco de dados relacionais. Com conhecimento adicional, você pode explorar recursos mais avançados e construir aplicativos robustos que dependem de bancos de dados. Divirta-se explorando o mundo do SQL! 😃👍
+Este projeto demonstra os conceitos básicos de manipulação de dados em um banco de dados usando SQL. O SQL é uma ferramenta poderosa para gerenciar dados em sistemas de gerenciamento 
+de banco de dados relacionais. Com conhecimento adicional, você pode explorar recursos mais avançados e construir aplicativos robustos que dependem de bancos de dados. Divirta-se 
+explorando o mundo do SQL! 😃👍
 
+## 🎁 Expressões de gratidão
+
+* Compartilhe com outras pessoas esse projeto 📢;
+* Quer saber mais sobre o projeto? Entre em contato para tomarmos um :coffee:;
+---
+⌨️ por [Alan Billy](https://github.com/billyanalytics)
+
+![github-contribution-grid-snake](https://user-images.githubusercontent.com/29084827/164712340-6b03015f-a428-4731-b1b9-a5605de203b2.svg)
