@@ -127,17 +127,17 @@ WHERE codpes = 10
 > ou olhando so o pedido
 
 <br>
-
-    ```sql
+    
+  ```sql 
     SELECT data_type
     FROM information_schema.columns
     WHERE table_name = 'tbpessoa' AND column_name = 'codpes';
-    ```
+  ```
 <br>
 
 > Visualização
 
-![](![image](https://github.com/billyanalytics/Desafio_sql/assets/142853508/40aafb89-5cf7-42d5-a854-3002cf1323b9)
+![image](https://github.com/billyanalytics/Desafio_sql/assets/142853508/40aafb89-5cf7-42d5-a854-3002cf1323b9)
 <br>
 
  - Alterando
