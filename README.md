@@ -64,15 +64,48 @@ CREATE DATABASE Desafio_sql ;
 ### Passo 3: Inserir 10 registros aleatórios 📥
  - INSERINDO DADOS
     ```sql
-   INSERT INTO tbpessoa VALUES
-         (1, 'João da Silva', '12345678901', '1990-05-15'),
-         (2, 'Maria Oliveira', '98765432101', '1985-12-20'),
-         (3, 'Pedro Santos', '45678912301', '1998-07-10'),
-         (4, 'Ana Pereira', '32165498701', '1992-03-25'),
-         (5, 'Carlos Fernandes', '78945612301', '1987-09-05'),
-         (6, 'Laura Almeida', '65432198701', '2000-11-30'),
-         (7, 'Fernando Souza', '14725836901', '1995-06-18'),
-         (8, 'Mariana Ribeiro', '85236974101', '1989-08-12'),
-         (9, 'Ricardo Gomes', '36914725801', '1993-04-02'),
-         (10, 'Isabel Lima', '74185236901', '1997-01-22');
-			    ```
+    INSERT INTO tbpessoa VALUES
+          (1, 'João da Silva', '12345678901', '1990-05-15'),
+          (2, 'Maria Oliveira', '98765432101', '1985-12-20'),
+          (3, 'Pedro Santos', '45678912301', '1998-07-10'),
+          (4, 'Ana Pereira', '32165498701', '1992-03-25'),
+          (5, 'Carlos Fernandes', '78945612301', '1987-09-05'),
+          (6, 'Laura Almeida', '65432198701', '2000-11-30'),
+          (7, 'Fernando Souza', '14725836901', '1995-06-18'),
+          (8, 'Mariana Ribeiro', '85236974101', '1989-08-12'),
+          (9, 'Ricardo Gomes', '36914725801', '1993-04-02'),
+          (10, 'Isabel Lima', '74185236901', '1997-01-22');
+    ```
+### Passo 4: Alterar a datanasc do cod 5 🔄
+```sql
+UPDATE tbpessoa
+SET datanasc = '2022-03-08'
+WHERE codpes = 5
+```
+### Passo 5: Deletar o registro do cod 10 🗑️
+``` sql
+DELETE FROM tbpessoa
+WHERE codpes = 10
+```
+### Passo 6: Alterar o tipo de dado do campo cod 🔢
+ - Verificando qual o tipo de dado
+    ```sql
+    SELECT column_name, data_type
+    FROM information_schema.columns
+    WHERE table_name = 'tbpessoa';
+    ```
+    ou olhando so o pedido
+    ```sql
+    SELECT data_type
+    FROM information_schema.columns
+    WHERE table_name = 'tbpessoa' AND column_name = 'codpes';
+    ```
+ - Alterando
+    ```sql
+    ALTER TABLE tbpessoa
+    ALTER COLUMN codpes TYPE smallint
+    ```       
+### Passo 7: Criar outra tabela e realizar consultas 🔍 
+```sql
+
+```
