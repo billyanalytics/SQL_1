@@ -76,8 +76,12 @@ CREATE DATABASE Desafio_sql ;
           (9, 'Ricardo Gomes', '36914725801', '1993-04-02'),
           (10, 'Isabel Lima', '74185236901', '1997-01-22');
     ```
-Visualização 
+<br>
+
+> Visualização 
+
 ![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/Tabela%20Pessoa.png?raw=true)
+<br>
 
 ### Passo 4: Alterar a datanasc do cod 5 🔄
 ```sql
@@ -85,16 +89,24 @@ UPDATE tbpessoa
 SET datanasc = '2022-03-08'
 WHERE codpes = 5
 ```
-Visualização 
+<br>
+
+> Visualização  
+
 ![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/Altera%C3%A7%C3%A3o%20de%20dados.png?raw=true)
+<br>
 
 ### Passo 5: Deletar o registro do cod 10 🗑️
 ``` sql
 DELETE FROM tbpessoa
 WHERE codpes = 10
 ```
-Visualização
+<br>
+
+> Visualização
+
 ![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/exclus%C3%A3o%20da%20linha.png?raw=true)
+<br>
 
 ### Passo 6: Alterar o tipo de dado do campo cod 🔢
  - Verificando qual o tipo de dado
@@ -103,25 +115,42 @@ Visualização
     FROM information_schema.columns
     WHERE table_name = 'tbpessoa';
     ```
-Visualização
+<br>
+
+> Visualização
+
 ![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/verifica%C3%A7%C3%A3o%201.png?raw=truee)
- 
-ou olhando so o pedido
+<br>
+
+<br>
+
+> ou olhando so o pedido
+
+<br>
+
     ```sql
     SELECT data_type
     FROM information_schema.columns
     WHERE table_name = 'tbpessoa' AND column_name = 'codpes';
     ```
-Visualização
+<br>
+
+> Visualização
+
 ![](![image](https://github.com/billyanalytics/Desafio_sql/assets/142853508/40aafb89-5cf7-42d5-a854-3002cf1323b9)
+<br>
 
  - Alterando
     ```sql
     ALTER TABLE tbpessoa
     ALTER COLUMN codpes TYPE smallint
     ```
-Visualização
+<br>
+
+> Visualização
+
 ![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/Dado%20alterado.png?raw=true)
+<br>
        
 ### Passo 7: Criar outra tabela e realizar consultas 🔍 
   - Tabela Pessoa info
@@ -133,8 +162,12 @@ Visualização
           codpes smallint,
           FOREIGN KEY (codpes) REFERENCES tbpessoa(codpes));
     ```
-Visualização
+<br>
+
+> Visualização
+
 ![](https://github.com/billyanalytics/Desafio_sql/blob/main/Imagem/Tabela%20Pessoa%20Info.png?raw=true)
+<br>
 
 
 ## Conclusão
