@@ -53,7 +53,7 @@ CREATE DATABASE Desafio_sql ;
 ```
 
 ### Passo 2: Criar uma tabela 📋
-  - Clientes
+  - Pessoa
     ```sql
     CREATE TABLE tbpessoa(
           codpes INT PRIMARY KEY, 
@@ -61,6 +61,8 @@ CREATE DATABASE Desafio_sql ;
           cpf VARCHAR (11),
           datanasc DATE);  
     ```
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)    
+
 ### Passo 3: Inserir 10 registros aleatórios 📥
  - INSERINDO DADOS
     ```sql
@@ -76,17 +78,23 @@ CREATE DATABASE Desafio_sql ;
           (9, 'Ricardo Gomes', '36914725801', '1993-04-02'),
           (10, 'Isabel Lima', '74185236901', '1997-01-22');
     ```
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)
+
 ### Passo 4: Alterar a datanasc do cod 5 🔄
 ```sql
 UPDATE tbpessoa
 SET datanasc = '2022-03-08'
 WHERE codpes = 5
 ```
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)
+
 ### Passo 5: Deletar o registro do cod 10 🗑️
 ``` sql
 DELETE FROM tbpessoa
 WHERE codpes = 10
 ```
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)
+
 ### Passo 6: Alterar o tipo de dado do campo cod 🔢
  - Verificando qual o tipo de dado
     ```sql
@@ -94,18 +102,36 @@ WHERE codpes = 10
     FROM information_schema.columns
     WHERE table_name = 'tbpessoa';
     ```
-    ou olhando so o pedido
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)
+ 
+ou olhando so o pedido
     ```sql
     SELECT data_type
     FROM information_schema.columns
     WHERE table_name = 'tbpessoa' AND column_name = 'codpes';
     ```
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)
+
  - Alterando
     ```sql
     ALTER TABLE tbpessoa
     ALTER COLUMN codpes TYPE smallint
-    ```       
+    ```
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)
+       
 ### Passo 7: Criar outra tabela e realizar consultas 🔍 
-```sql
+  - Tabela Pessoa info
+    ```sql
+    CREATE TABLE tbpessoainfo (
+          codinfo smallint PRIMARY KEY,
+          cidade varchar(100),
+          profissao varchar(100),
+          codpes smallint,
+          FOREIGN KEY (codpes) REFERENCES tbpessoa(codpes));
+    ```
+![](https://github.com/billyanalytics/ERP-Desafio1/blob/main/Imagem/Clientes.png?raw=true)
 
-```
+
+## Conclusão
+Este projeto demonstra os conceitos básicos de manipulação de dados em um banco de dados usando SQL. O SQL é uma ferramenta poderosa para gerenciar dados em sistemas de gerenciamento de banco de dados relacionais. Com conhecimento adicional, você pode explorar recursos mais avançados e construir aplicativos robustos que dependem de bancos de dados. Divirta-se explorando o mundo do SQL! 😃👍
+
