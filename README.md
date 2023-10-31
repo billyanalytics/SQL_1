@@ -124,15 +124,14 @@ WHERE codpes = 10
 
 <br>
 
-> ou olhando so o pedido
-
+ - ou olhando so o pedido
 <br>
-    
-  ```sql 
+
+```sql 
     SELECT data_type
     FROM information_schema.columns
     WHERE table_name = 'tbpessoa' AND column_name = 'codpes';
-  ```
+```
 <br>
 
 > Visualização
