@@ -2,7 +2,7 @@
 [![Professor](https://img.shields.io/badge/Professor-AlexSouza-red.svg)](https://github.com/aasouzaconsult) 
 ![Assunto](https://img.shields.io/badge/Assunto-SQL-yellow.svg)
 <!-- Imagem redimensionada -->
-<img src="https://digitalcollege.com.br/wp-content/webp-express/webp-images/uploads/2022/05/logo-digital.png.webp" alt="texto alt" width="300">
+<img src="https://digitalcollege.com.br/wp-content/uploads/2022/05/logo-digital-1536x578.png" alt="texto alt" width="100">
 
 <!-- Imagem redimensionada -->
 <img src="https://itforum.com.br/wp-content/uploads/2018/05/dataanalytics_1193397784-2.jpg?x17029" alt="texto alt" width="600">
